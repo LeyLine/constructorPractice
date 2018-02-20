@@ -3,11 +3,19 @@ function Item (name, price){
   this.price = price;
 }
 
+//prototype inheritance
+function Fruit (name, price){
+  Item.call(this, name, price);
+  this.expiration = "tuesday";
+  this.brand = "dole";
+}
 var myItem = new Item("orange", "39c");
+
 
 // console.log(myItem.name);
 // console.log(myItem);
-
+//var myFruit = new Fruit("banana", "40");
+//console.log(myFruit);
 
 //Sharing behaviors through prototypes
 
